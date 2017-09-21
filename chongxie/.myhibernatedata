@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Tue May 30 14:12:12 CST 2017
+sessionFactoryName=hb.HibernateSessionFactory
+genBasicCompId=false
+profile=
+daoSFId=sessionFactory
+version=3.3
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=src/applicationContext.xml
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/chongxie/src/applicationContext.xml
+createConfigFile=false
+addLibs2Classpath=true

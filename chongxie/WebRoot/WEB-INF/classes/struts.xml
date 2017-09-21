@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+     <constant name="struts.objectFactory" value="spring" />
+      <constant name="struts.devMode" value="true" />
+     <!--  <package name="com.w.tools" namespace="/" extends="struts-default">
+      <action name="passwordsafe" class="com.w.tools.PasswordSafe"></action>
+      </package> -->
+  <package name="com.w.action" namespace="/" extends="struts-default">
+
+		<action name="Login" class="useraction" method="login">
+			<result name="success">user/success.jsp</result>
+			<result name="success1">user/success1.jsp</result>
+			<result name="success2">user/success2.jsp</result>
+			<result name="success3">user/success3.jsp</result>
+			<result name="error">user/Error.jsp</result>
+		</action>
+		
+		 <action name="register" class="useraction" method="register">
+           <result  name="success" >/user/zhuceSuccess.jsp</result>
+           <result  name="error" >/user/zhuceError.jsp</result> 
+        </action>
+        
+        <action name="tianbao" class="tianbao" method="Tablein">
+        <result name="success">/user/success.jsp</result>
+        <result name="error">/user/Error.jsp</result>
+        </action>
+        <action name="xqgl" class="xqgl" method="gl">
+         <result name="success">/user/tianbao3.jsp</result>
+         <result name="error">/user/tianbao3.jsp</result>
+        </action>
+      
+        <action name="xqgx" class="xqgx" method="bianji">
+         <result name="success">/user/tianbao2.jsp</result>
+         <result name="error">/user/Error.jsp</result>
+        </action>
+         <action name="shenhe" class="xqgx" method="shenhe">
+         <result name="success">/user/tianbao4.jsp</result>
+         <result name="error">/user/Error.jsp</result>
+        </action>
+      <!--   <action name="se" class="se" method="search">
+		  <result name="success" type="redirectAtion"></result>
+		  <result name="error">/user/Error.jsp</result>
+		</action>  -->
+		
+		<!--  <action name="select-all" class="se" method="search">
+		  <result name="success">/user/Error.jsp</result>
+		</action> -->
+		</package>
+		
+		<package name="loadd" extends="json-default">
+		   <action name="loadbumen" class="tableaction" method="loadbumen">
+			<result name="success" type="json"></result>
+		</action>
+		  <action name="se" class="se" method="search">
+		    <result name="success" type="json"></result>
+		    </action>
+		<action name="loaddiyu" class="tableaction" method="loaddiyu">
+			<result name="success" type="json"></result>
+		</action> 
+		<action name="quanc" class="tableaction" method="quanc">
+			<result name="success" type="json"></result>
+		</action> 
+		
+		</package>
+</struts>    

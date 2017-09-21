@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+
+
+/* searchTxt */
+.searchBtn button,.searchTxt .searchMenu .searchSelected{background-image:url(images/searchbg.png);background-repeat:no-repeat;}
+
+.searchTxt{float:left;width:399px;height:30px;border:2px solid #d3d3d3;border-right:0;position:relative;z-index:20;background:#fff;}
+.searchTxt .radius{width:1px;height:1px;overflow:hidden;background:#f4f4f4;position:absolute;top:-2px;left:-2px;}
+.searchTxtHover{float:left;width:399px;height:30px;border:2px solid #3297d8;border-right:0;position:relative;z-index:20;background:#fff;}
+.searchTxtHover .radius{width:1px;height:1px;overflow:hidden;background:#cce5f5;position:absolute;top:-2px;left:-2px;}
+
+
+.searchTxt input{float:left;border:0;background:#fff;color:#333;font:14px/22px '宋体',verdana,tahoma,arial,'SimSun',sans-serif;width:221px;height:22px;margin:0;outline:medium none;padding:4px;}
+.searchTxt .sosoLogo{float:right;margin:8px 6px 0 0;display:inline;}
+.searchBtn{float:left;}
+.searchBtn button{background-position:0px 0px;border:0;color:#fff;cursor:pointer;float:left;font-size:16px;height:34px;text-indent:-9999px;width:86px;}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script> <style type="text/css">
+#form1 table tr td strong {
+	font-weight: bold;
+}
+.comments {
+
+width:100%;
+overflow:auto;
+word-break:break-all;
+font-size:16px;
+ background-color:##66ccff;
+
+
+}
+.danyuange
+{
+	height:100%;
+}
+
+</style>
+ <script src="jquery/jquery-1.7.min.js"></script> 
+ <script type="text/javascript" src="jscheck/ty.js" charset="UTF-8">
+  </script>
+<!-- <script type="text/javascript"> -->
+<!-- $(function(){ 
+
+	$("#searchSelected").click(function(){ 
+		$("#searchTab").show();
+		$(this).addClass("searchOpen");
+	}); 
+
+	$("#searchTab li").hover(function(){
+		$(this).addClass("selected");
+	},function(){
+		$(this).removeClass("selected");
+	});
+	 
+	$("#searchTab li").click(function(){
+		$("#searchSelected").html($(this).html());
+		$("#searchTab").hide();
+		$("#searchSelected").removeClass("searchOpen");
+	});
+	
+});
+</script> -->
+</head>
+<body>
+
+<form method="post" name="form1" action="search" target="_blank" style="width:487px;height:34px;margin:40px auto 0 auto;">
+	<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+		<div class="radius" style="top:-2px;"></div>
+		<div class="radius" style="top:31px;"></div>
+		
+		<input name="w" type="text" placeholder="请输入技术需求名称"/>
+	</div>
+	
+	<div class="searchBtn" >
+		<button id="searchBtn" type="submit" >搜索</button>
+	</div>
+  </form>
+<h3 align="center">&nbsp;</h3>
+ <div>
+  <form id="form3" name="form3" method="post" action="search" target="_parent">
+    <table width="931" height="200" border="1" align="center">
+      <tr>
+        <td width="154" height="37">*机构属性</td>
+        <td width="761">
+        <label>
+            <input type="radio" name="tianbao.jigou" value="企业 " id="Ins_0" /> 企业 </label>
+          <label>
+            <input type="radio" name="tianbao.jigou" value="高等院校" id="Ins_1" />高等院校</label>
+          <label>
+            <input type="radio" name="tianbao.jigou" value="研究机构 " id="Ins_2" />研究机构 </label>
+          <label>
+            <input type="radio" name="tianbao.jigou" value="其他" id="Ins_3" />其他</label>
+       
+        </td>
+      </tr>
+      <tr>
+        <td height="40">*科技活动类型</td>
+        <td>
+         <label>
+            <input type="radio" name="tianbao.hdlx" value="基础研究" id="hdlx_0" />基础研究</label>
+          <label>
+            <input type="radio" name="tianbao.hdlx" value="应用研究" id="hdlx_1" />应用研究</label>
+          <label>
+            <input type="radio" name="tianbao.hdlx" value="试验发展" id="hdlx_2" />试验发展</label>
+             <br />
+          <label>
+            <input type="radio" name="tianbao.hdlx" value="研究发展与成果应用" id="hdlx_3" />研究发展与成果应用</label>
+          <label>
+            <input type="radio" name="tianbao.hdlx" value="技术推广与科技服务 " id="hdlx_4" />技术推广与科技服务 </label>
+         <label>
+            <input type="radio" name="tianbao.hdlx" value="生产性活动 " id="hdlx_5" />生产性活动 </label>
+        </p>
+        </td>
+      </tr>
+     
+      <tr id="belongrow">
+        <td height="37">*需求技术所属领域</td>
+        <td>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="电子信息" id="linyu_0" />
+            电子信息</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="光机电一体化" id="linyu_1" />
+            光机电一体化</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="生物技术与制药 " id="linyu_2" />
+            生物技术与制药 </label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="新材料及应用" id="linyu_3" />
+            新材料及应用</label>
+            <br/>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="现代农业" id="linyu_4" />
+            现代农业</label>
+            <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="新能源与高效节能" id="linyu_5" />
+            新能源与高效节能</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="资源与环境 " id="linyu_6" />
+            资源与环境</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="高技术服务业" id="linyu_7" />
+            高技术服务业</label>
+           <br/>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="海洋" id="linyu_8" />
+            海洋</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="社会公共事业" id="linyu_9" />
+            社会公共事业</label>
+           <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="医疗卫生" id="linyu_10" />
+            医疗卫生</label>
+          <label>
+            <input type="checkbox" name="tianbao.xuqiuliyu" value="其他" id="linyu_11" />
+            其他</label>
+          <br/>
+          <br />
+      <input type="submit" name="tijiao" id="tijiao"   value="搜索" />
+      	 <input type="reset" name="reset" id="reset" value="重置" />
+        </td>
+      </tr>        
+              </table>
+  </form>
+  
+</div>
+
+</body>
+</html>
